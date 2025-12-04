@@ -1,76 +1,57 @@
-📝 Sistema de Tarefas com Python + MongoDB Atlas
+# Sistema de Tarefas – Python + MongoDB Atlas
 
-Aplicação simples de gerenciamento de tarefas desenvolvida em Python, utilizando o MongoDB Atlas como banco de dados.
-O projeto implementa um CRUD completo com:
+Aplicação simples de gerenciamento de tarefas construída em **Python**, utilizando **MongoDB Atlas** como banco de dados.  
+O projeto conta com operações completas de CRUD, busca por status, busca por tags e suporte a comentários — tudo via terminal.
 
-✔ Criar tarefas
+---
 
-✔ Listar tarefas
+## Funcionalidades
 
-✔ Atualizar status
+- Criar tarefas
+- Listar tarefas
+- Buscar tarefas por status
+- Buscar tarefas por tag
+- Atualizar status
+- Adicionar comentários
+- Deletar tarefas
 
-✔ Buscar por status
+---
 
-✔ Buscar por tags
+## Estrutura do Projeto
 
-✔ Adicionar comentários
-
-✔ Deletar tarefas
-
-A aplicação usa uma interface simples via terminal e possui código modular dividido em db.py (funções do banco) e main.py (menu principal).
-
-📂 Estrutura do Projeto
+```
 MongoDB-Jonas-Lucas/
- ├── db.py           # Funções do CRUD e conexão com o MongoDB
- ├── main.py         # Menu principal da aplicação
- ├── README.md       # Documentação do projeto
- └── .vscode/        # Configurações do VS Code
+ ├── db.py        # Conexão e operações CRUD com o MongoDB
+ ├── main.py      # Menu principal e interação com o usuário
+ ├── README.md    # Documentação do projeto
+ └── .vscode/     # Configurações do VS Code (opcional)
+```
 
-🚀 Como rodar
-1. Instale as dependências
+---
+
+## Como Executar
+
+### 1) Instale as dependências
+```bash
 pip install pymongo
 pip install dnspython
+```
 
-2. Configure sua connection string no db.py
+### 2) Configure sua connection string em `db.py`
+```python
 uri = "mongodb+srv://<usuario>:<senha>@cluster0.mongodb.net/"
+```
 
-3. Execute a aplicação:
+### 3) Execute o programa
+```bash
 python main.py
+```
 
-📌 Funcionalidades
-✔ Criar Tarefa
+---
 
-Inclui título, descrição, status e múltiplas tags.
+## Modelo de Documento (MongoDB)
 
-✔ Listar Tarefas
-
-Mostra todas as tarefas armazenadas no banco.
-
-✔ Buscar por Status
-
-Ex.:
-
-pendente
-concluida
-em_andamento
-
-✔ Buscar por Tag
-
-Busca mesmo com letras maiúsculas/minúsculas diferentes.
-
-✔ Atualizar Status
-
-Altera o status através do ID da tarefa.
-
-✔ Comentários
-
-Permite adicionar múltiplos comentários em uma tarefa.
-
-✔ Deletar
-
-Remove a tarefa permanentemente.
-
-🧱 Modelo de Documento
+```json
 {
   "titulo": "Fazer atividade",
   "descricao": "Entregar hoje",
@@ -85,17 +66,20 @@ Remove a tarefa permanentemente.
     }
   ]
 }
+```
 
-👥 Contribuidores
+---
 
-Jonas Gabriel (@jonasssgabriel) – criador principal
+## Colaboradores
 
-Lucas (@LuckLeal) – colaborador e suporte geral
+| Nome                  | GitHub                       |
+|---------------------- |------------------------------|
+| Jonas Gabriel         | https://github.com/jonasssgabriel |
+| Lucas (LuckLeal)      | https://github.com/LuckLeal |
 
-📄 Licença
+---
 
-Este projeto é livre para estudo e uso acadêmico.
+## Licença
 
-📬 Contato
-
-Github do autor: github.com/jonasssgabriel
+Projeto desenvolvido para fins acadêmicos e estudo.  
+Sinta-se livre para utilizar, modificar e melhorar.
